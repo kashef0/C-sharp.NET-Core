@@ -1,0 +1,15 @@
+C:\cygwin64\home\kashe\git-files\js\webutveckling-year(2)\c#-MOMENT(01)\C-sharp.NET-Moment-01\Arrays\bin\Debug\net8.0\Arrays.exe
+C:\cygwin64\home\kashe\git-files\js\webutveckling-year(2)\c#-MOMENT(01)\C-sharp.NET-Moment-01\Arrays\bin\Debug\net8.0\Arrays.deps.json
+C:\cygwin64\home\kashe\git-files\js\webutveckling-year(2)\c#-MOMENT(01)\C-sharp.NET-Moment-01\Arrays\bin\Debug\net8.0\Arrays.runtimeconfig.json
+C:\cygwin64\home\kashe\git-files\js\webutveckling-year(2)\c#-MOMENT(01)\C-sharp.NET-Moment-01\Arrays\bin\Debug\net8.0\Arrays.dll
+C:\cygwin64\home\kashe\git-files\js\webutveckling-year(2)\c#-MOMENT(01)\C-sharp.NET-Moment-01\Arrays\bin\Debug\net8.0\Arrays.pdb
+C:\cygwin64\home\kashe\git-files\js\webutveckling-year(2)\c#-MOMENT(01)\C-sharp.NET-Moment-01\Arrays\obj\Debug\net8.0\Arrays.GeneratedMSBuildEditorConfig.editorconfig
+C:\cygwin64\home\kashe\git-files\js\webutveckling-year(2)\c#-MOMENT(01)\C-sharp.NET-Moment-01\Arrays\obj\Debug\net8.0\Arrays.AssemblyInfoInputs.cache
+C:\cygwin64\home\kashe\git-files\js\webutveckling-year(2)\c#-MOMENT(01)\C-sharp.NET-Moment-01\Arrays\obj\Debug\net8.0\Arrays.AssemblyInfo.cs
+C:\cygwin64\home\kashe\git-files\js\webutveckling-year(2)\c#-MOMENT(01)\C-sharp.NET-Moment-01\Arrays\obj\Debug\net8.0\Arrays.csproj.CoreCompileInputs.cache
+C:\cygwin64\home\kashe\git-files\js\webutveckling-year(2)\c#-MOMENT(01)\C-sharp.NET-Moment-01\Arrays\obj\Debug\net8.0\Arrays.sourcelink.json
+C:\cygwin64\home\kashe\git-files\js\webutveckling-year(2)\c#-MOMENT(01)\C-sharp.NET-Moment-01\Arrays\obj\Debug\net8.0\Arrays.dll
+C:\cygwin64\home\kashe\git-files\js\webutveckling-year(2)\c#-MOMENT(01)\C-sharp.NET-Moment-01\Arrays\obj\Debug\net8.0\refint\Arrays.dll
+C:\cygwin64\home\kashe\git-files\js\webutveckling-year(2)\c#-MOMENT(01)\C-sharp.NET-Moment-01\Arrays\obj\Debug\net8.0\Arrays.pdb
+C:\cygwin64\home\kashe\git-files\js\webutveckling-year(2)\c#-MOMENT(01)\C-sharp.NET-Moment-01\Arrays\obj\Debug\net8.0\Arrays.genruntimeconfig.cache
+C:\cygwin64\home\kashe\git-files\js\webutveckling-year(2)\c#-MOMENT(01)\C-sharp.NET-Moment-01\Arrays\obj\Debug\net8.0\ref\Arrays.dll

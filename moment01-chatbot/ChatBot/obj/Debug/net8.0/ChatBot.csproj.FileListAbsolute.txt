@@ -1,0 +1,15 @@
+C:\cygwin64\home\kashe\git-files\js\webutveckling-year(2)\c#-MOMENT(01)\C-sharp.NET-Moment-01\ChatBot\bin\Debug\net8.0\ChatBot.exe
+C:\cygwin64\home\kashe\git-files\js\webutveckling-year(2)\c#-MOMENT(01)\C-sharp.NET-Moment-01\ChatBot\bin\Debug\net8.0\ChatBot.deps.json
+C:\cygwin64\home\kashe\git-files\js\webutveckling-year(2)\c#-MOMENT(01)\C-sharp.NET-Moment-01\ChatBot\bin\Debug\net8.0\ChatBot.runtimeconfig.json
+C:\cygwin64\home\kashe\git-files\js\webutveckling-year(2)\c#-MOMENT(01)\C-sharp.NET-Moment-01\ChatBot\bin\Debug\net8.0\ChatBot.dll
+C:\cygwin64\home\kashe\git-files\js\webutveckling-year(2)\c#-MOMENT(01)\C-sharp.NET-Moment-01\ChatBot\bin\Debug\net8.0\ChatBot.pdb
+C:\cygwin64\home\kashe\git-files\js\webutveckling-year(2)\c#-MOMENT(01)\C-sharp.NET-Moment-01\ChatBot\obj\Debug\net8.0\ChatBot.GeneratedMSBuildEditorConfig.editorconfig
+C:\cygwin64\home\kashe\git-files\js\webutveckling-year(2)\c#-MOMENT(01)\C-sharp.NET-Moment-01\ChatBot\obj\Debug\net8.0\ChatBot.AssemblyInfoInputs.cache
+C:\cygwin64\home\kashe\git-files\js\webutveckling-year(2)\c#-MOMENT(01)\C-sharp.NET-Moment-01\ChatBot\obj\Debug\net8.0\ChatBot.AssemblyInfo.cs
+C:\cygwin64\home\kashe\git-files\js\webutveckling-year(2)\c#-MOMENT(01)\C-sharp.NET-Moment-01\ChatBot\obj\Debug\net8.0\ChatBot.csproj.CoreCompileInputs.cache
+C:\cygwin64\home\kashe\git-files\js\webutveckling-year(2)\c#-MOMENT(01)\C-sharp.NET-Moment-01\ChatBot\obj\Debug\net8.0\ChatBot.sourcelink.json
+C:\cygwin64\home\kashe\git-files\js\webutveckling-year(2)\c#-MOMENT(01)\C-sharp.NET-Moment-01\ChatBot\obj\Debug\net8.0\ChatBot.dll
+C:\cygwin64\home\kashe\git-files\js\webutveckling-year(2)\c#-MOMENT(01)\C-sharp.NET-Moment-01\ChatBot\obj\Debug\net8.0\refint\ChatBot.dll
+C:\cygwin64\home\kashe\git-files\js\webutveckling-year(2)\c#-MOMENT(01)\C-sharp.NET-Moment-01\ChatBot\obj\Debug\net8.0\ChatBot.pdb
+C:\cygwin64\home\kashe\git-files\js\webutveckling-year(2)\c#-MOMENT(01)\C-sharp.NET-Moment-01\ChatBot\obj\Debug\net8.0\ChatBot.genruntimeconfig.cache
+C:\cygwin64\home\kashe\git-files\js\webutveckling-year(2)\c#-MOMENT(01)\C-sharp.NET-Moment-01\ChatBot\obj\Debug\net8.0\ref\ChatBot.dll
