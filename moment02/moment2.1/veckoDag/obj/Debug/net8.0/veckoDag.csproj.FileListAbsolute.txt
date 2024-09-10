@@ -1,0 +1,14 @@
+C:\Users\kashe\OneDrive\Desktop\moment-02\veckoDag\bin\Debug\net8.0\veckoDag.exe
+C:\Users\kashe\OneDrive\Desktop\moment-02\veckoDag\bin\Debug\net8.0\veckoDag.deps.json
+C:\Users\kashe\OneDrive\Desktop\moment-02\veckoDag\bin\Debug\net8.0\veckoDag.runtimeconfig.json
+C:\Users\kashe\OneDrive\Desktop\moment-02\veckoDag\bin\Debug\net8.0\veckoDag.dll
+C:\Users\kashe\OneDrive\Desktop\moment-02\veckoDag\bin\Debug\net8.0\veckoDag.pdb
+C:\Users\kashe\OneDrive\Desktop\moment-02\veckoDag\obj\Debug\net8.0\veckoDag.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kashe\OneDrive\Desktop\moment-02\veckoDag\obj\Debug\net8.0\veckoDag.AssemblyInfoInputs.cache
+C:\Users\kashe\OneDrive\Desktop\moment-02\veckoDag\obj\Debug\net8.0\veckoDag.AssemblyInfo.cs
+C:\Users\kashe\OneDrive\Desktop\moment-02\veckoDag\obj\Debug\net8.0\veckoDag.csproj.CoreCompileInputs.cache
+C:\Users\kashe\OneDrive\Desktop\moment-02\veckoDag\obj\Debug\net8.0\veckoDag.dll
+C:\Users\kashe\OneDrive\Desktop\moment-02\veckoDag\obj\Debug\net8.0\refint\veckoDag.dll
+C:\Users\kashe\OneDrive\Desktop\moment-02\veckoDag\obj\Debug\net8.0\veckoDag.pdb
+C:\Users\kashe\OneDrive\Desktop\moment-02\veckoDag\obj\Debug\net8.0\veckoDag.genruntimeconfig.cache
+C:\Users\kashe\OneDrive\Desktop\moment-02\veckoDag\obj\Debug\net8.0\ref\veckoDag.dll
