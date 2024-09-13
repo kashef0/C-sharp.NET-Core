@@ -1,0 +1,14 @@
+C:\Users\kashe\OneDrive\Desktop\moment-02\bubblesort\randomNum\bin\Debug\net8.0\randomNum.exe
+C:\Users\kashe\OneDrive\Desktop\moment-02\bubblesort\randomNum\bin\Debug\net8.0\randomNum.deps.json
+C:\Users\kashe\OneDrive\Desktop\moment-02\bubblesort\randomNum\bin\Debug\net8.0\randomNum.runtimeconfig.json
+C:\Users\kashe\OneDrive\Desktop\moment-02\bubblesort\randomNum\bin\Debug\net8.0\randomNum.dll
+C:\Users\kashe\OneDrive\Desktop\moment-02\bubblesort\randomNum\bin\Debug\net8.0\randomNum.pdb
+C:\Users\kashe\OneDrive\Desktop\moment-02\bubblesort\randomNum\obj\Debug\net8.0\randomNum.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kashe\OneDrive\Desktop\moment-02\bubblesort\randomNum\obj\Debug\net8.0\randomNum.AssemblyInfoInputs.cache
+C:\Users\kashe\OneDrive\Desktop\moment-02\bubblesort\randomNum\obj\Debug\net8.0\randomNum.AssemblyInfo.cs
+C:\Users\kashe\OneDrive\Desktop\moment-02\bubblesort\randomNum\obj\Debug\net8.0\randomNum.csproj.CoreCompileInputs.cache
+C:\Users\kashe\OneDrive\Desktop\moment-02\bubblesort\randomNum\obj\Debug\net8.0\randomNum.dll
+C:\Users\kashe\OneDrive\Desktop\moment-02\bubblesort\randomNum\obj\Debug\net8.0\refint\randomNum.dll
+C:\Users\kashe\OneDrive\Desktop\moment-02\bubblesort\randomNum\obj\Debug\net8.0\randomNum.pdb
+C:\Users\kashe\OneDrive\Desktop\moment-02\bubblesort\randomNum\obj\Debug\net8.0\randomNum.genruntimeconfig.cache
+C:\Users\kashe\OneDrive\Desktop\moment-02\bubblesort\randomNum\obj\Debug\net8.0\ref\randomNum.dll
