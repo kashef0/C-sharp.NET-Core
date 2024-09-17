@@ -1,5 +1,7 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿// C# program för att hitta dagen för datum
 
+
+using System.Resources;
 
 namespace BirthDay
 {
@@ -7,80 +9,103 @@ namespace BirthDay
     {
         static void Main()
         {
-            int inputBirthDay, inputBirthMonth, inputBirthYear;
+            bool inputReset = true;
+            string? inputResetValue;
+            
             Console.WriteLine("Ange dag, månad och år för det datum, du är intresserad av, \noch tryck på enter för att ta reda på vilken veckodag det var.\n");
-
-            Console.Write("Vänligen ange din födelsedag (dag): ");
+            do {
+            int inputBirthDay, inputBirthMonth, inputBirthYear;
+            
+            do {
+            Console.Write("Vänligen ange födelsedag (dag): ");
             if (!int.TryParse(Console.ReadLine(), out inputBirthDay)) {
                 Console.WriteLine("Ogiltlig värde, vänligen ange dagen som siffra.)");
-                return;
-            } else if (inputBirthDay > 31|| inputBirthDay < 1) {
+            
+            } else if (inputBirthDay < 1|| inputBirthDay > 31) {
                 Console.WriteLine("Ogiltig dag. Vänligen ange ett tal mellan 1 och 31.)");
-                return;
+                
             }
-
-            Console.Write("Vänligen ange din födelsedag (månad): ");
+            } while(inputBirthDay < 1|| inputBirthDay > 31);
+            
+            do {
+            Console.Write("Vänligen ange födelsedag (månad): ");
             if (!int.TryParse(Console.ReadLine(), out inputBirthMonth)) {
                 Console.WriteLine("Ogiltlig värde, vänligen ange månaden som siffra.");
-                return;
             } else if (inputBirthMonth > 12|| inputBirthMonth < 1) {
                 Console.WriteLine("Info: året har 12 månader. Vänligen ange ett tal mellan 1 och 12.)");
-                return;
             }
+            } while(inputBirthMonth > 12|| inputBirthMonth < 1);
 
-            Console.Write("Vänligen ange din födelsedag (år): ");
+            do {
+
+            Console.Write("Vänligen ange födelsedag (år): ");
             if (!int.TryParse(Console.ReadLine(), out inputBirthYear)) {
                 Console.WriteLine("Vänligen ange året som nummer (1999)");
-                return;
             } else if (Convert.ToString(inputBirthYear).Length != 4 || inputBirthYear > 2024) {
                 Console.WriteLine("Du har angett ett fel format på året eller ogiltigt år.");
-                return;
             }
+            } while(Convert.ToString(inputBirthYear).Length != 4 || inputBirthYear > 2024);
 
             /*
             använde try catch för ändra format på dagen och månaden den kommer att 
             lägga till 0 före om dem minder än 10.
             */
             DateTime date;
-            string newDayFormat = inputBirthDay.ToString("D2");
-            string newMonthFormat = inputBirthMonth.ToString("D2");
 
+            bool ISDate = true;
             try {
                 date = new DateTime(inputBirthYear, inputBirthMonth, inputBirthDay);
-                Console.WriteLine($"Det angivna datumet är: {newDayFormat}-{newMonthFormat}-{inputBirthYear}");
+                // Console.WriteLine($"\nDet angivna datumet är: {newDayFormat}-{newMonthFormat}-{inputBirthYear} eller {nameOfDay}/{nameOfMonth}/{inputBirthYear}");
 
             } catch (ArgumentOutOfRangeException) {
+                
+                ISDate = false;
+            }
+
+            if (ISDate) {
+                date = new DateTime(inputBirthYear, inputBirthMonth, inputBirthDay);
+                Console.WriteLine($"\nDet angivna datumet är: {date.ToString("dd/MM/yyyy")} är en giltig datum och var på en {date.Day}/{date.Month}/{date.Year}.");
+            } else {
                 Console.WriteLine("Ogiltigt datum. Vänligen ange giltligt datum.");
             }
 
 
             Zellercongruence(inputBirthDay, inputBirthMonth, inputBirthYear);
 
-            Console.Write("vill du countiune press ja else press no: ");
-            
+            Console.Write("Vill du försätta skriv (ja/nej)? ");
+            inputResetValue = Console.ReadLine()?.ToLower();
+
+            if (inputResetValue == "ja") {
+                Console.WriteLine("ett nytt försök!");
+            } else if (inputResetValue == "nej") {
+                inputReset = false;
+                Console.WriteLine("Välkona tillbaka!");
+            }
+            } while(inputReset);
             
         }
 
-
+        // Zeller’s Congruence
+        // det är alogritm för att hitta veckodagen för vilken datum
         static void Zellercongruence(int day,
                     int month, int year)
         {
-            if (month == 1)
-            {
+            if (month == 1) {
                 month = 13;
                 year--;
-            }
-            if (month == 2)
+            } else if (month <= 2)
             {
                 month = 14;
                 year--;
-            }
+            } 
             int q = day;
             int m = month;
             int k = year % 100;
             int j = year / 100;
             int h = q + 13 * (m + 1) / 5 + k + k / 4 + j / 4 + 5 * j;
             h = h % 7;
+
+            // skriva ut dagen för datum enligt användaren input ovan
             switch (h)
             {
                 case 0:
@@ -88,8 +113,7 @@ namespace BirthDay
                     break;
 
                 case 1:
-                    Console.WriteLine(@"Det var söndagen, 
-                    Söndagsbarn får leva och njuta rikt och vist och sedan berömligt sluta");
+                    Console.WriteLine("Det var söndagen, Söndagsbarn får leva och njuta rikt och vist och sedan berömligt sluta");
                     break;
 
                 case 2:
@@ -112,8 +136,6 @@ namespace BirthDay
                     Console.WriteLine("Det var fredagen, Fredagsbarn får kärlek och lycka");
                     break;
             }
-
-            Console.WriteLine(h);
         }
 
     }
