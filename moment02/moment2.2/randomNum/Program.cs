@@ -1,9 +1,10 @@
 ﻿
 /* Information: 1. I terminalen skriv dotnet och ett av följande altrnativ (stigande, fallande eller random)
-                2. Efter första steget visas ett meddelande som frågar hur många element du vill generera 
+                2. Efter första steget visas ett meddelande som frågar hur många siffror du vill generera 
 */
 
 using System;
+using System.ComponentModel;
 using System.Diagnostics;
 
 namespace RandomNumber
@@ -12,39 +13,53 @@ namespace RandomNumber
     {
         static void Main(string[] args)
         {
-            int numberOfItems;
-            var rand = new Random(); // generera slumpmässiga tal
             bool ISReset = true;
-            /* do - while kontrollera att koden ska köras 
-             en gång innan en fråga visar upp till användaren om vill försätt */
-            if (args == null || args.Length == 0)
+            do
             {
-                args = new string[] { "ingenting" };
-                Console.WriteLine($"du har angett {args[0]}, vänligen ange 'dotnet run' med ett av följande altrnativ (stigande, fallande eller random)");
-                    return;
-            }
-            else if (args.Length > 0)
-            {
-
-                if (args[0] == "stigande" || args[0] == "fallande" || args[0] == "random")
+                var numberOfItems = 0;
+                var rand = new Random(); // generera slumpmässiga tal
+                /* do - while kontrollera att koden ska köras 
+                 en gång innan en fråga visar upp till användaren om vill försätt */
+                if (args == null || args.Length == 0)
                 {
-                    Console.Write("hur många sffror från (1-100) vill du att skriva ut: ");
-                }
-                else
-                {
+                    args = new string[] { "ingenting" };
                     Console.WriteLine($"du har angett {args[0]}, vänligen ange 'dotnet run' med ett av följande altrnativ (stigande, fallande eller random)");
                     return;
                 }
-            }
-            do
-            {
-
-                numberOfItems = Convert.ToInt32(Console.ReadLine());
-                if (numberOfItems < 1 || numberOfItems > 100)
+                else if (args.Length > 0)
                 {
-                    Console.WriteLine("ange sifra mellan 1 och 100");
-                    return;
+
+                    if (args[0] == "stigande" || args[0] == "fallande" || args[0] == "random")
+                    {
+                        bool IsCorrectNum = true;
+                        do
+                        {
+                            Console.Write("hur många sffror från (1-100) vill du att skriva ut: ");
+                            string? stringValue = Console.ReadLine();
+
+                            if (int.TryParse(stringValue, out numberOfItems))
+                            {
+                                if (numberOfItems >= 1 && numberOfItems <= 100)
+                                {
+                                    IsCorrectNum = false;
+                                }
+                                else
+                                {
+                                    Console.WriteLine($"{stringValue} är ogiltligt, vänligen ange sifra mellan 1 och 100");
+                                }
+                            } else {
+                                Console.WriteLine($"Du har angett {stringValue}, ange sifra mellan 1 och 100. Försök igen.");
+                            }
+                        } while (IsCorrectNum);
+                    }
+                    else
+                    {
+                        Console.WriteLine($"du har angett {args[0]}, vänligen ange 'dotnet run' med ett av följande altrnativ (stigande, fallande eller random)");
+                        return;
+                    }
+
                 }
+
                 Console.WriteLine("\n");
                 // Generera och visa random integer värde som användaren anger .
                 int[] arrayOfNumbers = new int[numberOfItems];
@@ -81,7 +96,7 @@ namespace RandomNumber
                     if (userResetInput == "ja")
                     {
                         ISReset = true;
-                        Console.Write("hur många sffror från (1-100) vill du att skriva ut: ");
+                        // Console.Write("hur många sffror från (1-100) vill du att skriva ut: ");
                         break;
                     }
                     else if (userResetInput == "nej")
