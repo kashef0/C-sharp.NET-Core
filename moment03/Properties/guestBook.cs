@@ -14,15 +14,5 @@ class Prop
         posts = aGuestPost;
     }
 
-    // public override bool Equals(object? obj)
-    // {
-    //     Prop? p = obj as Prop;
-    //     return Id.Equals(p?.Id);
-    // }
-    // public override int GetHashCode()
-    // {
-    //     return Id.GetHashCode();
-    // }
 }
-
 
