@@ -1,3 +1,4 @@
+using Classes;
 using Newtonsoft.Json;
 
 namespace moment03.methods;
@@ -7,7 +8,7 @@ public static class DeleteElement
     public static void DeleteGuest()
     {
         bool isReset = true;
-        int inputUser; // Variabel för att lagra användarens val av id att radera.
+        string? inputUser; // Variabel för att lagra användarens val av id att radera.
         string filePath = "guestBook.json";
         List<Prop> guestBook = new List<Prop>();
 
@@ -28,12 +29,20 @@ public static class DeleteElement
                 Console.WriteLine($"[{j.Id}] {j.guestName} - {j.posts}");
             }
             Console.Write("Vänligen, ange nummer på vilket gästnamn du vill ta bort: ");
-            inputUser = Convert.ToInt32(Console.ReadLine());
+            inputUser = Console.ReadLine();
+            // kontrollera om input är tom eller null
+            if (string.IsNullOrEmpty(inputUser)){
+                Console.WriteLine("ogitligt värde, försök igen");
+                isReset = true;
+                continue;
+            }
+
+            if (int.TryParse(inputUser, out int num)){
 
             // söker efter objektet med det id som användaren angett 
-            var itemRemove = guestBook.SingleOrDefault(r => r.Id == inputUser);
+            var itemRemove = guestBook.SingleOrDefault(r => r.Id == num);
             // om objektet finns tas det bort från listan
-            if (itemRemove != null && itemRemove.Id == inputUser)
+            if (itemRemove != null && itemRemove.Id == num)
             {
                 // tar bort från listan
                 guestBook.Remove(itemRemove);
@@ -46,13 +55,14 @@ public static class DeleteElement
                     Console.WriteLine($"[{x.Id}] {x.guestName} - {x.posts}");
                 }
                 // // frågar användaren om de vill fortsätta lägga till fler inlägg.
-                isReset = NewTry.CheckedInput();
+                isReset = Reset.CheckedInput();
 
             }
             else
             {
                 Console.WriteLine($"Gästnamnet med ID: {inputUser} hittades inte.");
 
+            }
             }
         }
 
