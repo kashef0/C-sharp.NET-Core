@@ -94,26 +94,68 @@ public class ProdMethod
                 var getProductId = ProdRepo.GetProductById(ProductId); // Hämta produkt baserat på ID
                 if (getProductId != null)
                 {
-                    Console.Write("Namn: ");
-                    getProductId.Name = Console.ReadLine();
-
-                    Console.Write("Kategori ID: ");
-                    if (int.TryParse(Console.ReadLine(), out int categoryId))
+                    bool isvaldit = true;
+                    while (isvaldit)
                     {
-                        getProductId.CategoryId = categoryId;
+                        Console.Write("Namn: ");
+                        string productName = Console.ReadLine() ?? string.Empty;
+                        if (!string.IsNullOrWhiteSpace(productName) && !int.TryParse(productName, out _))
+                        {
+                            getProductId.Name = productName;
+                            isvaldit = false;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Vänligen ange produkt namn.");
+                        }
+
                     }
 
-                    Console.Write("Antal: ");
-                    if (int.TryParse(Console.ReadLine(), out int quantity))
+                    bool IsReset = true;
+                    while (IsReset)
                     {
-                        getProductId.Quantity = quantity;
-                    }
+                        int _categoryId;
+                        Console.Write("Kategori ID: ");
+                        string? Kategori_ID = Console.ReadLine();
+                        var (_outputKategori_ID, _IsValid) = ProdVallation.CheckValue(Kategori_ID, IsReset);
+                        _categoryId = Convert.ToInt32(_outputKategori_ID);
 
-                    Console.Write("Pris: ");
-                    if (double.TryParse(Console.ReadLine(), out double price))
+                        if (_categoryId == CatRepo.GetCategoryById(_categoryId)?.CategoryId)
+                        {
+                            getProductId.CategoryId = _categoryId;
+                            IsReset = _IsValid;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Produkten hittades inte");
+                        }
+
+                    }
+                    IsReset = true;
+                    while (IsReset)
                     {
+                        Console.Write("Antal: ");
+                        string? inputQuy = Console.ReadLine();
+                        var (_outputQuantity, IsValid) = ProdVallation.CheckValue(inputQuy, IsReset);
+                        int _quantity = Convert.ToInt32(_outputQuantity);
+                        getProductId.Quantity = _quantity;
+                        IsReset = IsValid;
+
+                    }
+                    IsReset = true;
+                    while (IsReset)
+                    {
+                        double price;
+                        Console.Write("Pris: ");
+                        string? inputPrice = Console.ReadLine();
+                        var (_outputPrice, _IsValid) = ProdVallation.CheckValue(inputPrice, IsReset);
+                        price = Convert.ToDouble(_outputPrice);
                         getProductId.Price = price;
+                        IsReset = _IsValid;
                     }
+
+                    isvaldit = false;
+                
                     // Uppdatera produkten i repo
                     ProdRepo.UpdateProduct(ProductId, getProductId);
                     isChecked = false;

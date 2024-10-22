@@ -36,7 +36,7 @@ public class TransRepo
         File.WriteAllText(filePath, Json);
     }
 
-    // Metod för att lägga till en ny transaktion
+     // Metod för att lägga till en ny transaktion
     public static void Add(string cashierName, int productId, string productName, double price, int beforeQty, int soldQty)
     {
         var transaction = new Transaction
@@ -68,6 +68,18 @@ public class TransRepo
 
     // Metod för att hämta alla transaktioner
     public static IEnumerable<Transaction> GetAllTransactions() => transactions;
+    // public static IEnumerable<Transaction> GetByDayAndCashier(string CashierName, DateTime date)
+    // {
+    //     if (string.IsNullOrWhiteSpace(CashierName))
+    //     {
+    //         return transactions.Where(x => x.Timestamp.Date == date.Date);
+    //     }
+    //     else
+    //     {
+    //         return transactions.Where(x => x.CashierName.ToLower().Contains(CashierName.ToLower()) && x.Timestamp.Date == date.Date);
+    //     }
+
+    // }
 
     // Metod för att söka transaktioner baserat på cashier's namn och datum
     public static IEnumerable<Transaction> Search(string cashierName, DateTime startDate, DateTime endDate)

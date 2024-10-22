@@ -26,7 +26,7 @@ public class TransMethods
         table.Write();
         Console.WriteLine("\nRegistrera Försäljning:");
 
-        Console.Write("Cashier namn: ");
+        Console.Write("Ange kassörens namn: ");
         string cashierName = Console.ReadLine() ?? string.Empty;
         while (int.TryParse(cashierName, out _) || string.IsNullOrEmpty(cashierName))
         {

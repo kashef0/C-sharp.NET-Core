@@ -16,9 +16,12 @@ public class ProdVallation
             {
                 Console.Write("Du har angett tomt värde. ");
             }
-            else if (!double.TryParse(input, out _))
+            else if (!double.TryParse(input, out double num))
             {
                 Console.Write("Ogiltigt värde, vänligen. ");
+            } else if (num < 0)
+            {
+                    Console.WriteLine("värde kan inte vara mindre än noll");
             }
             else
             {

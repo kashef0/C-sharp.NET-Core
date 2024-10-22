@@ -13,11 +13,6 @@ public class Transaction
     public int BeforeQty { get; set; }
     public int SoldQty { get; set; }
 
-    [Required]
     public string CashierName { get; set; } = "";
 
-    internal string Sum(Func<object, object> value)
-    {
-        throw new NotImplementedException();
-    }
 }
