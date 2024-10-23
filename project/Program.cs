@@ -2,6 +2,7 @@
 using CSharp_Project.Models;
 using CSharp_Project.Repo;
 using CSharp_Project.Validation;
+using WelcomeMessage;
 
 
 
@@ -10,11 +11,16 @@ namespace ConsoleApp
     class Program
     {
         static void Main(string[] args)
-        {
+        {   
+            Console.Clear();
             // Ladda data från JSON-filer
             CatRepo.ChechFileExist();
             ProdRepo.ChechFileExist();
             TransRepo.ChechFileExist();
+            Welcome.Hello();
+            Console.WriteLine("Tryck på valfri tangent för att fortsätta till huvudmenyn...");
+            Console.ReadKey();
+            Console.Clear();
             // Oändlig loop för att visa huvudmenyn tills användaren avslutar
             while (true)
             {
