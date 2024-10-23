@@ -1,9 +1,12 @@
 using System;
 using System.Formats.Asn1;
+using System.Security.Cryptography.X509Certificates;
+using ConsoleApp;
 using ConsoleTables;
 using CSharp_Project.Models;
 using CSharp_Project.Repo;
 using CSharp_Project.Validation;
+using Newtonsoft.Json.Serialization;
 
 namespace CSharp_Project.Methods;
 
@@ -41,7 +44,7 @@ public class ProdMethod
                 string? inputCategoryId = Console.ReadLine();
                 if (string.IsNullOrEmpty(inputCategoryId) || !int.TryParse(inputCategoryId, out inputNum) || CatRepo.GetCategoryById(inputNum)?.CategoryId != inputNum)
                 {
-                    Console.WriteLine("Vänliga ange Kategori's Id");
+                    Console.WriteLine("Vänliga ange giltig Kategori's Id");
                 }
                 else { isReset = false; }
             }
@@ -230,18 +233,22 @@ public class ProdMethod
         Console.Clear();
         Console.WriteLine("Produkter:");
         var products = ProdRepo.GetProducts();  // Hämta alla produkter
-        var table = new ConsoleTable("Product ID", "Product Name", "Kategori ID", "Antal", "Pris");
+        var table = new ConsoleTable("Product ID", "Product Name", "Kategori ID", "Kategori name", "Antal", "Pris");
         foreach (var product in products)
         {
+            var category = CatRepo.GetCategories().FirstOrDefault(x => x.CategoryId == product.CategoryId);
+            var cateName = category?.Name;
             // Lägg till varje produkt i tabellen
             table.AddRow(
                 product.ProductId,
                 product.Name,
                 product.CategoryId,
+                cateName,
                 product.Quantity,
                 string.Format("{0:c}", product.Price)
             );
         }
+
         table.Write(); // Skriv ut tabellen
         Console.WriteLine("Tryck på valfri tangent för att fortsätta...");
         Console.ReadKey();
@@ -250,13 +257,16 @@ public class ProdMethod
     public static void showProductInMethod()
     {
         var products = ProdRepo.GetProducts();
-        var table = new ConsoleTable("Product ID", "Product Name", "Kategori ID", "Antal", "Pris");
+        var table = new ConsoleTable("Product ID", "Product Name", "Kategori ID", "kategory name", "Antal", "Pris");
         foreach (var product in products)
         {
+            var category = CatRepo.GetCategories().FirstOrDefault(x => x.CategoryId == product.CategoryId);
+            var cateName = category?.Name;
             table.AddRow(
                 product.ProductId,
                 product.Name,
                 product.CategoryId,
+                cateName,
                 product.Quantity,
                 string.Format("{0:c}", product.Price)
             );
